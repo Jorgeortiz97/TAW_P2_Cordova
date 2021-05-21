@@ -1,0 +1,28 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "es.um.inf.helloworld"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "es.um.inf.helloworld"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "es.um.spacenews"
+    },
+    "cordova-plugin-web-share": {
+      "PACKAGE_NAME": "es.um.spacenews"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "es.um.spacenews"
+    }
+  }
+}

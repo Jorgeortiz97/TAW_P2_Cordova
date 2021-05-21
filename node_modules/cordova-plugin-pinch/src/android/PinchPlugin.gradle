@@ -1,0 +1,8 @@
+repositories {
+    maven { url = "https://fluxloop.jfrog.io/artifactory/pinch" }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'com.fluxloop.pinch:pinch-sdk:2.5.2'
+}

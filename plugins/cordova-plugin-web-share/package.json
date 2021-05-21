@@ -1,0 +1,64 @@
+{
+  "_from": "cordova-plugin-web-share",
+  "_id": "cordova-plugin-web-share@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-uCx3VDJNM2MI4+R+O3KjDfvSgEDnLDoL1Yrp3LkHzpSrTe8wglrG37MuAcal0jf4Zj21umEYm3ST2LOVpdY41Q==",
+  "_location": "/cordova-plugin-web-share",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-web-share",
+    "name": "cordova-plugin-web-share",
+    "escapedName": "cordova-plugin-web-share",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-web-share/-/cordova-plugin-web-share-1.2.0.tgz",
+  "_shasum": "0366811b608ededfb625a2d0a7af46c15329564b",
+  "_spec": "cordova-plugin-web-share",
+  "_where": "/home/cordova/Desktop/space-news",
+  "author": {
+    "name": "Maksim Chemerisuk",
+    "email": "chemerisuk@gmail.com",
+    "url": "https://github.com/chemerisuk"
+  },
+  "bugs": {
+    "url": "https://github.com/chemerisuk/cordova-plugin-web-share/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-web-share",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Web Share API polyfill for Cordova",
+  "homepage": "https://github.com/chemerisuk/cordova-plugin-web-share#readme",
+  "keywords": [
+    "cordova",
+    "share",
+    "web share",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-web-share",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemerisuk/cordova-plugin-web-share.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
+  },
+  "version": "1.2.0"
+}

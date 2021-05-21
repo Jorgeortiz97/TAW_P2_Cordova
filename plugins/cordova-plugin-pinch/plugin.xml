@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+
+<plugin id="cordova-plugin-pinch" version="1.1.19" xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>Pinch</name>
+    
+    <description>Pinch Proximity Framework Plugin</description>
+    
+    <keywords>cordova,pinch</keywords>
+    
+    <repo>https://bitbucket.org/fluxloop/pinch.cordova.plugin.git</repo>
+    
+    <engines>
+        <engine name="cordova" version=">=9.0.0" />
+    </engines>
+
+    <js-module src="www/pinch.js" name="Pinch">
+        <clobbers target="pinch" />
+    </js-module>
+
+    <preference name="API_KEY"/>
+
+    <platform name="ios">
+        
+        <config-file parent="/*" target="config.xml">
+            <feature name="PinchPlugin">
+                <param name="ios-package" value="PinchPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="PURPublisherId">            
+            <string>$API_KEY</string>            
+        </config-file>    
+
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>fetch</string>
+                <string>remote-notification</string>
+                <string>bluetooth-central</string>
+            </array>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>             
+            </dict>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSBluetoothAlwaysUsageDescription">
+            <string>The app needs access to bluetooth to function properly.</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>Please allow to get usefull information for your location.</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+            <string>Please select ALWAYS to get usefull information for your location, even when you are not using the app.</string>
+        </config-file>   
+    
+
+        <!-- Pinch SDK Cordova Plugin Source for iOS -->
+        <header-file src="src/ios/PinchPlugin.h" />
+        <source-file src="src/ios/PinchPlugin.m" />
+        <header-file src="src/ios/AppDelegate+PinchPlugin.h" />
+        <source-file src="src/ios/AppDelegate+PinchPlugin.m" />
+        <!-- Frameworks needed by Pinch SDK for iOS -->
+        <framework src="CoreLocation.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="CoreBluetooth.framework" />
+        <framework src="AdSupport.framework" />
+
+        <podspec>
+            <config>                
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="PinchSDK" swift-version="4.0" spec="~> 2.0.3" />  
+            </pods>
+        </podspec>        
+
+    </platform>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.fluxloop.pinch.sdk.API_KEY" android:value="$API_KEY"/>
+        </config-file>            
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PinchPlugin">
+                <param name="android-package" value="cordova.plugins.PinchPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+            <access origin="*" />
+            <preference name="android-minSdkVersion" value="19" />
+        </config-file>            
+        <dependency id="cordova-plugin-androidx" />
+        <dependency id="cordova-plugin-androidx-adapter" />        
+        <framework src="src/android/PinchPlugin.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/PinchPlugin.java" target-dir="src/cordova/plugins" />
+    </platform>    
+    
+</plugin>

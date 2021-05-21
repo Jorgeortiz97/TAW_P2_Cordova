@@ -1,0 +1,90 @@
+{
+  "_from": "cordova-plugin-pinch@^1.1.20",
+  "_id": "cordova-plugin-pinch@1.1.20",
+  "_inBundle": false,
+  "_integrity": "sha512-LpNi3rUWoFlyLgN54D5dwCCO4tCG0ieugi8EycMBkJ4Rk32ZSsib6i36BGoly9JobwivN/ODblVKbMfD50Xl2A==",
+  "_location": "/cordova-plugin-pinch",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-pinch@^1.1.20",
+    "name": "cordova-plugin-pinch",
+    "escapedName": "cordova-plugin-pinch",
+    "rawSpec": "^1.1.20",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.20"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-pinch/-/cordova-plugin-pinch-1.1.20.tgz",
+  "_shasum": "4e3ad64b188d4e2145a9ae2335fc7741fe179ecf",
+  "_spec": "cordova-plugin-pinch@^1.1.20",
+  "_where": "/home/cordova/Desktop/space-news",
+  "author": {
+    "name": "fluxLoop AS"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/fluxloop/pinch/wrappers/pinch-cordova/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-pinch",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "elementtree": "^0.1.7",
+    "lodash": "^4.17.4",
+    "plist": "^1.2.0",
+    "shelljs": "^0.7.8",
+    "tostr": "^0.1.0",
+    "xcode": "^0.8.9"
+  },
+  "deprecated": false,
+  "description": "Cordova Pinch Proximity Plugin",
+  "devDependencies": {
+    "got": "^6.5.0",
+    "jshint": "^2.6.0"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "0.1.0": {
+        "cordova": ">=6.0.0"
+      },
+      ">1.0.69": {
+        "cordova": ">=8.0.0",
+        "cordova-android": ">=7.0.0"
+      }
+    }
+  },
+  "homepage": "https://gitlab.com/fluxloop/pinch/wrappers/pinch-cordova#readme",
+  "keywords": [
+    "cordova",
+    "pinch",
+    "ecosystem:cordova",
+    "cordova-android",
+    "beacon",
+    "ibeacon",
+    "proximity",
+    "fluxloop",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-pinch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/fluxloop/pinch/wrappers/pinch-cordova.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.1.20"
+}

@@ -1,0 +1,4 @@
+#Thu May 20 00:01:23 CEST 2021
+base.0=/home/cordova/Desktop/space-news/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/home/cordova/Desktop/space-news/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

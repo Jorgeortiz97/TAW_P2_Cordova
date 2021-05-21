@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Space News Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.12.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+
+        <img src="images/logo.png" class="navbar-logo"></img>
+
+        <a href="#" class="nav-link">Space News Portal</a>
+
+	<i id="NoWifiNotification" class="fa fa-wifi text-danger mx-1" style="display: none;"></i>
+	<i id="wifiNotification" class="fa fa-wifi text-success mx-1" style="display: none;"></i>
+        <i id="batteryNotification" style="display: none;"></i>   
+	<span id="4gConnection" class="iconify" data-icon="fluent:cellular-4g-24-filled" style="display: none"></span>
+	<span id="3gConnection" class="iconify" data-icon="fluent:cellular-3g-24-filled" style="display: none"></span>
+	<span id="connection" class="iconify" data-icon="carbon:connection-signal" style="display: none"></span>           
+
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="history.html">History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header header container-fluid" style="margin-top: 3.5em">
+
+        <div class="stars">
+            <div class="twinkling">
+                <div class="clouds"></div>
+            </div>
+        </div>
+
+        <div class="description">
+            <h1>Search history </h1>
+        </div>
+    </header>
+
+    <!-- Page Data -->
+    <div class="container features">
+        <div class="form-group row justify-content-center">
+            <button type="button" id="deleteLocalStorageBtn" class="btn btn-success">Delete all searches</button>
+        </div>
+
+    </div>
+
+    <div class="container" id="search-files">
+        <!-- Search history information comes here -->
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">About this page</h6>
+                    <p>This page has been created by Alejandro Martínez Ferao and Jorge Ortiz Escribano for the subject Current Trends of Web Development from the University of Murcia.</p>
+                    <p>Data shown has been retrieved using the <a href="https://spaceflightnewsapi.net/api/v2/articles/">SpaceFlightNewsAPI.</a></p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    University of Murcia
+                    <ul>
+                        <li><a href="mailto:amf76454@um.es">amf76454@um.es</a>.</li>
+                        <li><a href="mailto:jorge.ortize@um.es">jorge.ortize@um.es</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright text-center">© 2021 Copyright: University of Murcia</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="bootstrap/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/load-articles.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/history.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</body>
+
+</html>
